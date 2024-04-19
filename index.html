@@ -435,36 +435,56 @@
     </script>
     <script>
     var textsToType = [
-      "T",
-      "Th",
-      "Th3",
-      "Th",
-      "The",
-      "The_",
-      "The",
-      "The G",
-      "The G/",
-      "The G\\",
-      "The G0",
-      "The Go",
-      "The God",
-      "The Gods"
+      'T',
+      'Th',
+      'Th3',
+      'Th-',
+      'The',
+      'The_',
+      'The-',
+      'The 6',
+      'The G',
+      'The G0',
+      'The G\\',
+      'The G/',
+      'The Go',
+      'The Go*',
+      'The Go',
+      'The God',
+      'The God5',
+      'The Gods',
+      'The Gods_',
+      'The Gods 0',
+      'The Gods \\',
+      'The Gods /',
+      'The Gods O',
+      'The Gods On',
+      'The Gods On_',
+      'The Gods On 7',
+      'The Gods On ',
+      'The Gods On T',
+      'The Gods On T\\',
+      'The Gods On T/',
+      'The Gods On T0',
+      'The Gods On To',
+      'The Gods On Top'
     ];
+
       var typingTextElement = document.getElementById("typingText");
       var currentIndex = 0;
 
       function typeText(index) {
-        typingTextElement.textContent = "----------------" + textsToType[index] + "----------------";
+        typingTextElement.textContent = textsToType[index];
         currentIndex++;
         if (currentIndex >= textsToType.length) {
           currentIndex = 0;
         }
         setTimeout(function() {
-          if (textsToType[index] === "The Gods") {
+          if (textsToType[index] === "The Gods On Top") {
             setTimeout(function() {
               currentIndex = 0;
               typeText(currentIndex);
-            }, 5000); 
+            }, 4000); 
           } else {
             typeText(currentIndex);
           }
