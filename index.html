@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      // disable right click
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      document.onkeydown = function (e) {
+        // disable F12 key
+        if (e.keyCode == 123) {
+          return false;
+        }
+
+        // disable I key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          return false;
+        }
+
+        // disable J key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+          return false;
+        }
+
+        // disable U key
+        if (e.ctrlKey && e.keyCode == 85) {
+          return false;
+        }
+      };
+    </script>
+
+    <script type="text/javascript">
+      var msg =
+        "Welcome to our home - JDD 🔥🔥";
+      var chars = Array.from(msg);
+
+      function scrollTitle() {
+        chars.push(chars.shift());
+        document.title = chars.join("");
+        window.setTimeout(scrollTitle, 100);
+      }
+
+      (function () {
+        scrollTitle();
+      })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="The Gods - Bios">
+    <meta property="og:description" content="Site feito para redirecionamento para as bios dos THE GODS!">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/870344048282566686/1139975433585180785/x5Q03yl.png?ex=662d375b&is=661ac25b&hm=fc5fe6ca3d483d921a83b1779b8967b450d84cefbbd9f39e1929c40dd1e41647&">
+    <link rel="icon" href="tg icon.png" />
+    <title>-</title>
+    <style>
+      @font-face {
+        src: url("smallest.ttf");
+        font-family: "p7";
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap");
+
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+
+      @-moz-document url-prefix() {
+        html {
+          scrollbar-width: none;
+        }
+      }
+      body {
+        margin: 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overflow-y: scroll;
+      }
+      body::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+
+      body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+      }
+      #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        cursor: crosshair;
+      }
+
+      #text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 16px;
+        color: white;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+
+      .row1 {
+        display: flex;
+        position: fixed;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .column1 {
+        padding: 10px;
+      }
+
+      .column2 {
+        display: flex;
+        padding: 30px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inconsolata;
+        font-size: 15px;
+        background-color: #000;
+        color: white;
+        cursor: crosshair;
+      }
+
+      .myVideo {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      .content {
+        display: inline-block !important;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        color: #f1f1f1;
+        padding: 20px;
+      }
+
+      #myBtn {
+        width: 200px;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: lowercase;
+        overflow: hidden;
+        transition: 0.5s;
+        margin-top: 40px;
+        letter-spacing: 1px;
+      }
+
+      .login-box a span {
+        position: absolute;
+        display: block;
+      }
+
+
+      .click {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        position: fixed;
+        border-radius: 50%;
+        border: 1px solid #ffffff59;
+      }
+
+      @keyframes clickef-effect {
+        to {
+          transform:scale(15);
+          opacity: 0.01;
+        }
+      }
+
+      
+    </style>
+    <link
+      rel="stylesheet"
+      href="../cdn.jsdelivr.net/npm/bulma%400.9.3/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <audio id="backgroundMusic" src="assets/audio/Nino Leone - Filme (Aquarius World).mp3" loop></audio>
+    <div class="content">
+      <div class="row1">
+        <div class="column1">
+          <div class="login-box">
+            <form>
+              <a onclick="enterSite();">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> </a
+              ><a
+                onclick="enterSite();"
+                style="
+                  font-family: 'Inconsolata', monospace;
+                  color: #ffffff !important;
+                "
+                >click me ^-^</a
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mainSite">
+      <video autoplay="" loop="" class="myVideo" id="myVideo" playsinline="">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="content">
+        <div class="row1">
+          <div class="column1">
+            <center>
+              <a
+                style="
+                  font-family: 'Inconsolata', monospace;
+                  color: #ffffff !important;
+                "
+                >~~Jacocks [The Gods Creator]~~
+                <br></br>
+            </center>
+            <center>
+              <a
+                href="https://e-z.bio/JDD"
+                target="_blank"
+                style="
+                  font-family: 'Inconsolata', monospace;
+                  color: #ffffff !important;
+                "
+                >TG[1] Bio
+            </center>
+            <br></br>
+            <center>
+              <a
+                style="
+                  font-family: 'Inconsolata', monospace;
+                  color: #ffffff !important;
+                "
+                >~~younsky [The Gods oldest member]~~
+                <br></br>
+            </center>
+            <center>
+              <a
+                href="https://frifrai.github.io/bio-younsky/"
+                target="_blank"
+                style="
+                  font-family: 'Inconsolata', monospace;
+                  color: #ffffff !important;
+                "
+                >TG[2] Bio
+            </center>
+            <br></br>
+            <center>
+              <a
+                style="
+                  font-family: 'Inconsolata', monospace;
+                  color: #ffffff !important;
+                "
+                >~~Novato [The Gods metralha cavalos member]~~
+                <br></br>
+            </center>
+            <center>
+              <a
+                href="https://1nf1n1nyx.github.io/bio-novato/"
+                target="_blank"
+                style="
+                  font-family: 'Inconsolata', monospace;
+                  color: #ffffff !important;
+                "
+                >TG[3] Bio
+            </center>
+            <br></br>
+          </div>
+        </div>
+        <div class="column2">
+          <center>
+            <a id="typingText" style="font-family: 'Inconsolata', monospace; color: #ffffff !important;"></a>
+          </center>
+        </div>
+      </div>
+    </div>
+    <script src=""></script>
+    <script></script>
+    <script>
+      var x = document.getElementById("mainSite");
+      var y = document.getElementById("captcha");
+      var particles = document.getElementById("captcha");
+
+      var source = document.createElement("source");
+
+      x.style.display = "none";
+
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+      var loginBox = document.querySelector(".login-box");
+      var col = document.querySelector(".column2");
+      var Music = document.getElementById('backgroundMusic');
+
+      source.setAttribute("src", "assets/mp4/moon.mp4");
+      video.appendChild(source);
+
+      video.pause();
+
+
+      function enterSite() {
+        loginBox.remove();
+        video.volume = 0;
+        video.style.transform = "scale(1)";
+        Music.play();
+        video.play();
+        Music.volume = 0.10;
+        x.style.display = "block";
+        y.style.display = "none";
+      }
+
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+
+      function on() {
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+
+      window.onload = function () {
+        var elements = document.getElementsByClassName("typewrite");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-type");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+      };
+    </script>
+    <script>
+    var textsToType = [
+      'T',
+      'Th',
+      'Th3',
+      'Th-',
+      'The',
+      'The_',
+      'The-',
+      'The 6',
+      'The G',
+      'The G0',
+      'The G\\',
+      'The G/',
+      'The Go',
+      'The Go*',
+      'The Go',
+      'The God',
+      'The God5',
+      'The Gods',
+      'The Gods_',
+      'The Gods 0',
+      'The Gods \\',
+      'The Gods /',
+      'The Gods O',
+      'The Gods On',
+      'The Gods On_',
+      'The Gods On 7',
+      'The Gods On ',
+      'The Gods On T',
+      'The Gods On T\\',
+      'The Gods On T/',
+      'The Gods On T0',
+      'The Gods On To',
+      'The Gods On Top'
+    ];
+
+      var typingTextElement = document.getElementById("typingText");
+      var currentIndex = 0;
+
+      function typeText(index) {
+        typingTextElement.textContent = textsToType[index];
+        currentIndex++;
+        if (currentIndex >= textsToType.length) {
+          currentIndex = 0;
+        }
+        setTimeout(function() {
+          if (textsToType[index] === "The Gods On Top") {
+            setTimeout(function() {
+              currentIndex = 0;
+              typeText(currentIndex);
+            }, 4000); 
+          } else {
+            typeText(currentIndex);
+          }
+        }, 200);
+      }
+
+      typeText(currentIndex);
+    </script>
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    <script type="module">
+      new cursoreffects.fairyDustCursor({
+        colors: ["#ffffff", "#ffffff", "#ffffff"],
+      });
+    </script>
+    <script>
+      document.onclick = () => cc(event); 
+
+          function cc(e) {
+            const click = document.createElement("div");
+
+            click.className = "click";
+            document.body.appendChild(click);
+
+            click.style.left = `${e.clientX}px`;
+            click.style.top = `${e.clientY}px`; 
+
+            click.style.animation = "clickef-effect .4s  linear";
+            click.onanimationend = () => document.body.removeChild(click);
+          }
+
+    </script>
+  </body>
+</html>
